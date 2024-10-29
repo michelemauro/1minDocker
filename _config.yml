@@ -20,7 +20,7 @@ description: >
 # root of your server.
 baseurl: "/" # the subpath of your site, e.g. /blog/
 url: "https://astrabert.github.io" # the base hostname & protocol for your site
-cover: "/assets/header_image.jpg"
+cover: "/assets/header_image.png"
 logo: "/assets/logo.png"
 
 # Build settings
@@ -55,13 +55,10 @@ jekyll-archives:
 # Category descriptions (for archive pages)
 descriptions:
   - cat: beginners
-    desc: "Posts describing beginner-level concepts on Docker"
 
   - cat: intermediate
-    desc: "Posts describing intermediate-level concepts on Docker"
 
   - cat: advanced
-    desc: "Posts describing advanced-level concepts on Docker"
 
 # Social icons and sharing options
 #

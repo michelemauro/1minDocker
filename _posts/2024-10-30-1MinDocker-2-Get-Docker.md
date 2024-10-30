@@ -1,5 +1,10 @@
-# Get Docker
-
+---
+layout: post
+title:  "1MinDocker #2 - Get Docker"
+date:   2024-10-30T19:00:00+01:00
+author: Clelia Bertelli
+categories: beginners
+---
 As we said in [the last article](https://dev.to/astrabert/1mindocker-1-what-is-docker-3baa), Docker is a **cross-platform** technology, so in this article we will go through all the platform-specific installation processes that will allow us to get Docker faster than we can imagine!🚀
 ### Docker on Windows
 [Docker on Windows](https://docs.docker.com/desktop/install/windows-install/) is only available as Docker Desktop, a Desktop application that manages _Docker engine_ (the technology that actually runs the virtual machines) through either **WSL2** or **Hyper-V**  as backend systems. 

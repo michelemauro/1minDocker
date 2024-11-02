@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "1MinDocker #4 - Docker CLI essentials"
-date:   2024-11-01T20:00:00+01:00
+date:   2024-11-1T20:00:00+01:00
 author: Clelia Bertelli
 categories: beginners
 ---

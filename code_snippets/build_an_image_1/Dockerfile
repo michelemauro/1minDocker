@@ -10,5 +10,7 @@ ENV GRADIO_VERSION=${GRADIO_V}
 RUN python3 -m pip cache purge
 RUN python3 -m pip install gradio==${GRADIO_VERSION}
 
+EXPOSE 7860
+
 ENTRYPOINT ["python3"]
 CMD ["/app/app.py"]

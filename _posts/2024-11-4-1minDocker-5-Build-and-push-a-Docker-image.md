@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "1MinDocker #4 - Build and push a Docker image"
+title:  "1MinDocker #5 - Build and push a Docker image"
 date:   2024-11-4T22:00:00+01:00
 author: Clelia Bertelli
 categories: intermediate 

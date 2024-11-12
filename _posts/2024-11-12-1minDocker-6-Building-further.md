@@ -130,7 +130,7 @@ RUN bash /data_science/installations/conda_deps_1.sh
 
 But let's say we also want to provide our image with an environment for AI development, that we only want to add to our build if the user specifies it at build time.
 
-In this case, we can use `IF...ELSE` conditional statements in our Dockerfile!
+In this case, we can use `if...else` conditional statements in our Dockerfile!
 
 We will create another file, `conda_deps_2.sh` with a python environment for AI development in which we will put some base packages such as:
 
@@ -166,12 +166,9 @@ Now we just add a condition to our Dockerfile:
 ```Dockerfile
 ARG BUILD_AI="False"
 
-IF ${BUILD_AI}=="TRUE"
-COPY ./conda_deps_2.sh /data_science/installations/
-RUN bash /data_science/installations/conda_deps_2.sh
-ELSE IF ${BUILD_AI}=="False"
-RUN echo "No AI environment will be built"
-DONE
+RUN if [ "$BUILD_AI" = "True" ]; bash /data_science/installations/conda_deps_2.sh; \
+    elif [ "$BUILD_AI" = "False" ]; then echo "No AI environment will be built"; \
+    else echo "BUILD_AI should be either True or False: you passed an invalid value, thus no AI environment will be built"; fi
 ```
 
 ### Building and its options
@@ -192,18 +189,15 @@ WORKDIR /data_science/
 
 RUN mkdir -p /data_science/installations/
 
-COPY ./conda_deps_1.sh /data_science/installations/
+COPY ./conda_deps_?.sh /data_science/installations/
 
 RUN bash /data_science/installations/conda_deps_1.sh
 
 ARG BUILD_AI="False"
 
-IF ${BUILD_AI}=="TRUE"
-COPY ./conda_deps_2.sh /data_science/installations/
-RUN bash /data_science/installations/conda_deps_2.sh
-ELSE IF ${BUILD_AI}=="False"
-RUN echo "No AI environment will be built"
-DONE
+RUN if [ "$BUILD_AI" = "True" ]; bash /data_science/installations/conda_deps_2.sh; \
+    elif [ "$BUILD_AI" = "False" ]; then echo "No AI environment will be built"; \
+    else echo "BUILD_AI should be either True or False: you passed an invalid value, thus no AI environment will be built"; fi
 
 CMD ["/bin/bash"]
 ```
@@ -235,8 +229,10 @@ You can now run your image interactively, loading also your pipelines as a volum
 docker run \
     -i \
     -t \
-    -v /home/user/datascience/pipelines/:/app/pipelines/ YOUR-USERNAME:data-science:latest-noai \
+    -v /home/user/datascience/pipelines/:/app/pipelines/ \
+    YOUR-USERNAME/data-science:latest-noai \
     "/bin/bash"
+
 # execute the following commands inside the container
 source activate python_deps
 conda deactivate 

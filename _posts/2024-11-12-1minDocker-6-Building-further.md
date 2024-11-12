@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "1MinDocker #6 - Building further"
-date:   2024-11-11T23:45:00+01:00
+date:   2024-11-12T02:00:00+01:00
 author: Clelia Bertelli
 categories: intermediate 
 ---

@@ -10,8 +10,8 @@ categories: beginners
 
 It can be regarded as a **DevOps** (Developement Operations) technology, as it is aimed at **easing and accelerating** shipping processes and times.
 
-Docker is **cross-platform** (available on Linux, Windows and MacOs) and OS-independent as its main feature is allowing developers to build **isolated environments** (virtual machines) in which to run other softwares without having any conflict or versioning/platform-specific problem with the local machine.
+Docker is **cross-platform** (available on Linux, Windows and MacOs) and OS-independent as its main feature is allowing developers to build **isolated environments** (you can think them as "lightweight" virtual machines) in which to run other software without having any conflict or versioning/platform-specific problem with the local machine.
 
-It comes as a **command line** tool, but also, in its **Docker Desktop** implementation, as a Desktop application from which developers can comfortably check Docker's status on their computer.
+It comes as a **command line** tool, but also has a companion desktop application called **Docker Desktop**, from which developers can comfortably check Docker's status on their computer.
 
 We will talk about downloading and getting to run Docker in our next session, but for now feel free to explore their resources [on their website](https://docs.docker.com/)!🥰

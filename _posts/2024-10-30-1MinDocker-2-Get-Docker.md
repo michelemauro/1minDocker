@@ -7,9 +7,9 @@ categories: beginners
 ---
 As we said in [the last article](https://dev.to/astrabert/1mindocker-1-what-is-docker-3baa), Docker is a **cross-platform** technology, so in this article we will go through all the platform-specific installation processes that will allow us to get Docker faster than we can imagine!🚀
 ### Docker on Windows
-[Docker on Windows](https://docs.docker.com/desktop/install/windows-install/) is only available as Docker Desktop, a Desktop application that manages _Docker engine_ (the technology that actually runs the virtual machines) through either **WSL2** or **Hyper-V**  as backend systems. 
+[Docker on Windows](https://docs.docker.com/desktop/install/windows-install/) is only available as Docker Desktop, a Desktop application that manages the _Docker engine_ (the technology that actually runs the virtual machines) through either **WSL2** or **Hyper-V**  as backend systems. 
 
-You need Windows 10 or 11 to make Docker work and, if you're using a _Windows Subsystem Linux_ (WSL), make sure to have upgraded it to WSL2. 
+You'll need Windows 10 or 11 to make Docker work and, if you're using _Windows Subsystem for Linux_ (WSL), make sure to have upgraded it to WSL2. 
 
 For the installation, you should get the binary that best suits your Windows machine from the link at the beginning of this paragraph, and from there simply click on `Docker Desktop Installer.exe` and follow up as you are prompted by the installation interface.🤗
 ### Docker on MacOS
